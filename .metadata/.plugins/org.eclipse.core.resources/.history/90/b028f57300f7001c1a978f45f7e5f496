@@ -1,0 +1,19 @@
+package pageclasses;
+
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+public class AdminLoginTest extends BaseClass {
+	@Test
+	public void adminLoginTest() {
+		LoginPage lp= new LoginPage(driver);
+		HomePage hp= new HomePage(driver);
+		lp.login("Admin", "Admin");
+		Boolean status=hp.verifyHomepage();
+		Assert.assertTrue(status);
+		hp.logout();
+		
+		
+	}
+
+}

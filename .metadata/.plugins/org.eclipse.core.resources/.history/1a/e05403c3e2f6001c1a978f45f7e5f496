@@ -1,0 +1,7 @@
+package TestCases;
+
+import testbase.BaseClass;
+
+public class AdminLoginTest extends BaseClass {
+
+}

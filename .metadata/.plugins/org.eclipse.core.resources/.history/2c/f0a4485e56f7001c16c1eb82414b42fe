@@ -1,0 +1,9 @@
+package pageclasses;
+
+public class LoginPage {
+	
+	public void login(String uname,String pwd) {
+		
+	}
+
+}

@@ -1,0 +1,36 @@
+package framework;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.PageFactory;
+
+public class BaseClass {
+	public static WebDriver driver;
+	public static URL="http://primusbank.qedgetech.com/";
+
+	public BaseClass (WebDriver driver) {
+        this.driver=driver;
+        PageFactory.initElements(driver, this);
+    }
+	
+	public static WebDriver launchBrowser(String browser,String URL)	
+	{
+		
+		if(browser.equalsIgnoreCase("Firefox"))
+		{
+			driver=new FirefoxDriver();
+		}
+		else if(browser.equalsIgnoreCase("Chrome"))
+		{
+			System.setProperty("webdriver.chrome.driver","D:\\chromedriver_win32\\chromedriver.exe");
+			driver=new ChromeDriver();
+		}
+ 	
+	   driver.manage().window().maximize();
+	   driver.get(URL);
+	   return driver;
+	
+	}
+
+}

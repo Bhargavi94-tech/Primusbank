@@ -1,0 +1,41 @@
+package pageclasses;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+import testbase.BaseClass;
+
+public class LoginPage extends BaseClass {
+	//public WebDriver driver;
+	
+	@FindBy(xpath="//span[@id='navTitleTrees']") 
+	private WebElement navtree;
+
+	@FindBy(linkText="Create & Manage Trees") 
+	private WebElement CreateTree;
+	
+	@FindBy(id="txtuId") 
+	private WebElement uname;
+	
+	@FindBy(id="txtPword") 
+	private WebElement pwd;
+	
+	@FindBy(id="navSignOutLink1") 
+	private WebElement signout1;
+
+	
+	
+	
+	public void AccountSignout() throws InterruptedException
+	
+	{
+		
+	}
+	public LoginPage(WebDriver driver) {
+        //this.driver=driver;
+        PageFactory.initElements(driver, this);
+    }
+
+}

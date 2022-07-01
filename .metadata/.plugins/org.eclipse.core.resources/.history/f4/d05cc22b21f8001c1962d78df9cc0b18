@@ -1,0 +1,14 @@
+package testcases;
+
+import pageclasses.AdminHomePage;
+import pageclasses.Employee;
+import pageclasses.LoginPage;
+import pageclasses.Users;
+import testngbaseclass.BaseCLass;
+
+public class NewEmployeeCreation extends BaseCLass{
+	LoginPage lp= new LoginPage(driver);
+	AdminHomePage ah= new AdminHomePage(driver);
+	Employee e= new Employee();
+	Users u= new Users();
+}

@@ -1,0 +1,32 @@
+package pageclasses;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+public class HomePage {
+	@FindBy(partialLinkText="Password") 
+	private WebElement changepwd;
+	
+	@FindBy(linkText="Logout") 
+	private WebElement logout;
+	
+	
+	
+	public void verifyHomepage(String uname,String pwd) 
+	
+	{
+
+		
+		
+	}
+	public void logout() {
+		logout.click();
+	}
+	public HomePage(WebDriver driver) {
+        //this.driver=driver;
+        PageFactory.initElements(driver, this);
+    }
+
+}

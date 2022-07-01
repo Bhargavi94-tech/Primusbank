@@ -1,0 +1,14 @@
+package TestCases;
+
+import org.testng.annotations.Test;
+
+import testbase.BaseClass;
+
+public class AdminLoginTest extends BaseClass {
+	@Test
+	public void adminLoginTest() {
+		LoginPage lp= new LoginPage(driver);
+		
+	}
+
+}
